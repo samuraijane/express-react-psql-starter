@@ -1,0 +1,11 @@
+// Rename this file to ".env" and use it to store sensitive credentials that do not belong in version control.
+// Note that `DB_USER` should match the user in the `db:create` script found in package.json
+// `DB_PASSWORD` should match whatever the password is for `DB_USER`.
+// Delete the lines above when you are done.
+
+DB_HOST=localhost
+DB_NAME=express_react_psql_starter
+DB_PASSWORD=
+DB_PORT=5432
+DB_USER=
+PORT=8080
