@@ -11,4 +11,9 @@ CREATE TABLE users (
   PRIMARY KEY(user_id)
 );
 INSERT INTO users (last_name, first_name, email, pw_hash, created_at, updated_at) VALUES
+  /*
+  TODO
+    delete this user before deploying as it exists for demo purposes only;
+    not deleting this user puts the database at risk.
+  */
   ('Anderson', 'Anna', 'anna@email.com', '1234', CURRENT_TIMESTAMP(3), CURRENT_TIMESTAMP(3));
