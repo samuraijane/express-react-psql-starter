@@ -4,7 +4,7 @@ CREATE TABLE users (
   user_id INT GENERATED ALWAYS AS IDENTITY,
   last_name varchar(30) not null,
   first_name varchar(30) not null,
-  email VARCHAR(50) not null,
+  email VARCHAR(50) not null unique,
   pw_hash VARCHAR(50) not null,
   created_at date not null,
   updated_at date not null,
