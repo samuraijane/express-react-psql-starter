@@ -1,2 +1,2 @@
-# Express React Starter
+# Express React PSQL Starter
 
