@@ -2,7 +2,8 @@
 // https://stackoverflow.com/questions/38235715/fetch-reject-promise-and-catch-the-error-if-status-is-not-ok
 
 export const fetcher = async <T>(input: RequestInfo, init?: RequestInit) => {
-  const response = await fetch(input, init);
+  const path = (window as any).CLIENT_ENV === "development" ? `http://localhost:8080` : '';
+  const response = await fetch(`${path}${input}`, init);
 
   if (!response.ok) {
     throw response;
@@ -10,3 +11,12 @@ export const fetcher = async <T>(input: RequestInfo, init?: RequestInit) => {
 
   return response.json() as Promise<T>;
 };
+
+export const setClientEnvironment = () => {
+  if (window.location.hostname === "localhost") {
+    return "development";
+  }
+  return "production";
+};
+
+//
