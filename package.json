@@ -6,7 +6,7 @@
   "scripts": {
     "build": "cd react-ui/ && npm install && npm run build",
     "db:create": "psql -U sj -d postgres -f ./sql/setup.sql",
-    "dev": "nodemon server.js",
+    "dev": "NODE_ENV=development nodemon server.js",
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
